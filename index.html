@@ -169,43 +169,23 @@
 
 <div class="section-title">ตัวอย่างลายเส้นทั้ง 50 เล่ม</div>
 
-<section class="grid">
+<section class="grid" id="samples-grid">
+</section>
 
-  <article class="card">
-    <img src="https://via.placeholder.com/600x750.png?text=เล่ม+01" alt="เล่ม 01">
-    <div class="num">เล่ม 01</div>
-    <div class="name">ไดโนเสาร์</div>
-  </article>
+<script>
+  const grid = document.getElementById("samples-grid");
 
-  <article class="card">
-    <img src="https://via.placeholder.com/600x750.png?text=เล่ม+02" alt="เล่ม 02">
-    <div class="num">เล่ม 02</div>
-    <div class="name">สัตว์ป่าซาฟารี</div>
-  </article>
+  for (let i = 1; i <= 50; i++) {
+    const num = String(i).padStart(2, "0");
 
-  <article class="card">
-    <img src="https://via.placeholder.com/600x750.png?text=เล่ม+03" alt="เล่ม 03">
-    <div class="num">เล่ม 03</div>
-    <div class="name">ผลไม้</div>
-  </article>
-
-  <article class="card">
-    <img src="https://via.placeholder.com/600x750.png?text=เล่ม+04" alt="เล่ม 04">
-    <div class="num">เล่ม 04</div>
-    <div class="name">สัตว์เลี้ยง</div>
-  </article>
-
-   <article class="card">
-    <img src="https://via.placeholder.com/600x750.png?text=เล่ม+04" alt="เล่ม 04">
-    <div class="num">เล่ม 05</div>
-    <div class="name">commingsoon</div>
-  </article>
-
-  <article class="card">
-    <img src="https://via.placeholder.com/600x750.png?text=เล่ม+04" alt="เล่ม 04">
-    <div class="num">เล่ม 06</div>
-    <div class="name">commingsoon</div>
-  </article>
+    grid.innerHTML += `
+      <article class="card">
+        <img src="samples/colorbook/sample-${num}.jpg" alt="เล่ม ${num}">
+        <div class="num">เล่ม ${num}</div>
+        <div class="name">สมุดระบายสีเล่ม ${num}</div>
+      </article>
+    `;
+  }
 
 </section>
 
